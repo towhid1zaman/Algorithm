@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+    /// stack = last in first out, that means sobar sesh e je dhukbe , sei sobar aage ber hobe
+                int n;
+                cin>>n;
+                stack<int>s;
+                for(int i = 0; i<n;i++)
+                {
+                    int x;
+                    cin>>x;
+                    cout<<"PUSH : "<<x<<endl;
+                    s.push(x);
+                }
+                cout<<"sizeofStack "<<s.size()<<endl;
+                cout<<"topElementOfStack "<<s.top()<<endl;
+
+                s.pop();
+                cout<<"After pop top element , top element is "<<s.top()<<endl;
+
+
+                while(!s.empty()){
+                    s.pop();
+                }
+
+                cout<<"is stack empty !  "<<s.empty()<<endl;
+
+
+                return 0;
+}
