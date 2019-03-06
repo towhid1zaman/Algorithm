@@ -1,0 +1,33 @@
+ #include<bits/stdc++.h>
+ using namespace std;
+ int main()
+ {
+     map<char, int> Map;
+     map<char, int>::iterator it;
+        for(char c = 'a'; c<='j';c++)
+        {
+            int value = (int)c;
+            Map[c] = value;
+        }
+        cout<<"Map Size: "<<Map.size()<<endl;
+        cout<<"Map value is: "<<endl;
+            for(it = Map.begin(); it != Map.end() ; it++)
+            {
+                cout<<"Key-> "<<(*it).first<<" Value-> "<<(*it).second<<endl;
+            }
+
+                cout<<"Key Value: "<<Map['a']<<endl;
+
+                if(Map.find('a') !=Map.end()) cout<<"Key 'a' Found"<<endl;
+                else cout<<"Key 'a' is not found"<<endl;
+
+                if(Map.find('z') != Map.end()) cout<<"Key 'z' found"<<endl;
+                else cout<<"Key 'z' is not found "<<endl;
+
+
+                Map.clear();
+
+                cout<<"Is This Map empty()! "<<Map.empty()<<endl;
+
+                return 0;
+ }
