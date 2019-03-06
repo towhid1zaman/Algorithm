@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long LL;
+///complexity(Osqrt(n))
+bool isPrime(LL n){
+        if (n<2) return false;
+        for(LL i = 2; i*i<=n;i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+}
+int main()
+{
+     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    LL x;
+    cin>>x;
+    if(isPrime(x)==true){
+        cout<<"This is prime"<<endl;
+    }
+    else
+        cout<<"This is not prime"<<endl;
+}
