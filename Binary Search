@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>v(n);
+    cout<<"enter elements "<<endl;
+    for(int i = 0; i<n;i++)
+    {
+        cin>>v[i];
+    }
+    sort(v.begin(),v.end());
+        cout<<"after sorting , elements is "<<endl;
+        for(int i = 0; i<n;i++){
+            cout<<v[i]<<" ";
+        }cout<<endl;
+        cout<<"Enter Elements that you want to search "<<endl;
+        int x;
+        cin>>x;
+        int a = 0, b = n-1;
+        while(a<=b){
+            int k = (a+b)/2;
+            if(v[k]==x){
+                cout<<x<<" found at " <<k<<endl;
+            }
+            if(v[k]>x)b = k - 1;
+            else a = k+1;
+        }
+
+        return 0;
+}
