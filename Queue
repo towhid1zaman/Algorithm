@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>.
+using namespace std;
+
+int main()
+{
+   /// queue = first in first out , that means , sobar agee je dhukbe sei sobar agee ber hobe 
+
+            int n;
+            cin>>n;
+            queue<int>Q;
+            for(int i = 0; i<n;i++){
+                int x;
+                cin>>x;
+                cout<<"PUSH "<<x<<endl;
+                Q.push(x);
+            }
+            cout<<"SizeOfQueue "<<Q.size()<<endl;
+
+            cout<<"Ekdom samner element "<<Q.front()<<endl;
+            while(!Q.empty()){
+                cout<<Q.front()<<endl;
+                Q.pop();
+            }
+
+            Q.pop();
+            cout<<"ekta pop kore deyar por, ekdom samner element "<<Q.front()<<endl;
+
+//            while(!Q.empty()){
+//                Q.pop();
+//            }
+            //cout<<"is queue empty "<<Q.empty()<<endl;
+
+
+
+            return 0;
+}
