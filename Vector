@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int n;
+    while(cin>>n){
+    vector<int>v(n);
+    for(int i = 0; i<n; i++){
+        cin>>v[i];
+    }
+    for(int i = 0; i<n;i++){
+        cout<<v[i]<<" ";
+    }cout<<endl;
+    cout<<"size-> "<<v.size()<<endl;
+    int mn = *min_element(v.begin(),v.end());
+    int mx  = *max_element(v.begin(),v.end());
+    int sum  = accumulate(v.begin(),v.end(),0);
+    cout<<"mn-> "<<mn<<" mx-> "<<mx<<"  sum-> "<<sum<<endl;
+    sort(v.begin(),v.end());
+    cout<<"after sorting all element look like "<<endl;
+    for(int i = 0; i<n;i++){
+        cout<<v[i]<<" ";
+    }cout<<endl;
+
+    v.erase(unique(v.begin(),v.end()),v.end());
+    cout<<"after make all element unique "<<endl;
+    for(int i = 0; i<v.size();i++){
+        cout<<v[i]<<" ";
+    }cout<<endl;
+
+    v.erase(v.begin()+2);
+    cout<<"after erasing 3rd element from vector "<<endl;
+    for(int i = 0; i<v.size();i++){
+        cout<<v[i]<<" ";
+    }cout<<endl;
+    v.clear();
+    cout<<"is vector empty ! " <<v.empty()<<endl;
+    }
+}
