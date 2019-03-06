@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    /**
+    1. All element are unique
+    2. They are all in sorted
+    3. operation : insert(),   size(),    begin(),    end(),     find(),      empty(),    erase(),    clear(), iterator (*it)
+    **/
+
+    int n;
+    cin>>n;
+    set<int>s;
+    for(int i = 0; i<n;i++){
+        int x;
+        cin>>x;
+        s.insert(x);
+    }
+    int sz = s.size();
+    cout<<"SizeOfSet "<<s.size()<<endl;
+
+        set<int>::iterator it;
+        for(it = s.begin(); it!=s.end();it++){
+            cout<<(*it)<<" ";
+        }cout<<endl;
+        set<int>::iterator x,y;
+         x = s.find(3);
+         y = s.find(6);
+        s.erase(x,y);
+
+        cout<<"After erasing 3 to  <6 element "<<endl;
+         for(it = s.begin(); it!=s.end();it++){
+            cout<<(*it)<<" ";
+        }cout<<endl;
+        s.clear();
+        cout<<"is set empty ! "<<s.empty()<<endl;
+
+
+        return 0;
+
+}
